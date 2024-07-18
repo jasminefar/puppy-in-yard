@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Playing in Yard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .scene {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            background-color: #fff;
+            border-radius: 60px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #a7ffeb, #e0f7fa);
+        }
+        .ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #4caf50;
+        }
+        .puppy {
+            position: absolute;
+            bottom: 150px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: #ffe0b2;
+            border-radius: 50%;
+        }
+        .puppy-ear {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background-color: #ffe0b2;
+            border-radius: 50%;
+        }
+        .puppy-ear.left {
+            top: -40px;
+            left: 20px;
+            transform: rotate(-30deg);
+        }
+        .puppy-ear.right {
+            top: -40px;
+            right: 20px;
+            transform: rotate(30deg);
+        }
+        .puppy-eye {
+            position: absolute;
+            top: 60px;
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .puppy-eye.left {
+            left: 50px;
+        }
+        .puppy-eye.right {
+            right: 50px;
+        }
+        .puppy-nose {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        .puppy-mouth {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            width: 60px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 0 0 30px 30px;
+            transform: translateX(-50%);
+        }
+        .puppy-arm {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background-color: #ffe0b2;
+            border-radius: 10px;
+        }
+        .puppy-arm.left {
+            bottom: 30px;
+            left: -30px;
+            transform: rotate(-30deg);
+        }
+        .puppy-arm.right {
+            bottom: 30px;
+            right: -30px;
+            transform: rotate(30deg);
+        }
+        .ball {
+            position: absolute;
+            bottom: 100px;
+            left: 350px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+        }
+        .ball-stripe {
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            background-color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .ball-stripe::before {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            background-color: #fff;
+            top: 0%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="background"></div>
+        <div class="ground"></div>
+        <div class="puppy">
+            <div class="puppy-ear left"></div>
+            <div class="puppy-ear right"></div>
+            <div class="puppy-eye left"></div>
+            <div class="puppy-eye right"></div>
+            <div class="puppy-nose"></div>
+            <div class="puppy-mouth"></div>
+            <div class="puppy-arm left"></div>
+            <div class="puppy-arm right"></div>
+        </div>
+        <div class="ball">
+            <div class="ball-stripe"></div>
+        </div>
+    </div>
+</body>
+</html>
